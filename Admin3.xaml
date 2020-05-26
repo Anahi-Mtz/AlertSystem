@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AlertSystem.Admin3">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="cold.jpeg" Aspect="AspectFill" />
+            <BoxView Color="White" Opacity="0.8"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="Mikuni.png" WidthRequest="50" HeightRequest="50" Margin="0,50,0,30" />
+
+                <StackLayout Grid.Row="1" Padding="20,10">
+                    <Label Text="Mikuni Mexicana S.A. de C.V." FontSize="25" ></Label>
+
+                    <Label Text="Alert System" FontSize="20"  HorizontalOptions="Center"></Label>
+                </StackLayout>
+               
+                <StackLayout Grid.Row="2" Padding="20,10">
+                    <Label x:Name="Welcome" Text="Welcome Admin!" FontSize="20" HorizontalOptions="Center" ></Label>
+                    <Label x:Name="AllUsers" Text="All Users" FontSize="20" HorizontalOptions="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" Padding="20,10">
+                    <Button Text="Add New User" x:Name="btnNewUser" BackgroundColor="DeepSkyBlue" CornerRadius="20" TextColor="White" HorizontalOptions="Center" Clicked="BtnNewUser_Clicked"></Button>
+                    <Button Text="Log Out" x:Name="btnLogOut"  BackgroundColor="DeepSkyBlue" CornerRadius="20" TextColor="White" HorizontalOptions="Center" Clicked="BtnLogOut_Clicked"></Button>
+                </StackLayout>
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

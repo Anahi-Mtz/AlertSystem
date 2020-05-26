@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AlertSystem.Admin4">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="cold.jpeg" Aspect="AspectFill" />
+            <BoxView Color="White" Opacity="0.8"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="Mikuni.png" WidthRequest="50" HeightRequest="50" Margin="0,50,0,30" />
+
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Label Text="Mikuni Mexicana S.A. de C.V." FontSize="25" ></Label>
+
+                    <Label Text="Alert System" FontSize="20"  HorizontalOptions="Center"></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Padding="30,20">
+                    <Label x:Name="Welcome" Text="Welcome Admin!" FontSize="20" HorizontalOptions="Center" ></Label>
+                    <Label x:Name="NewUser" Text="New User" FontSize="20" HorizontalOptions="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" Padding="30,20">
+                    <Entry Placeholder="Username" PlaceholderColor="Gray" x:Name="boxUsername"  />
+                    <Entry Placeholder="Description" PlaceholderColor="Gray" x:Name="boxDescription" />
+                    <Entry Placeholder="Password" PlaceholderColor="Gray" IsPassword="True" x:Name="boxPassword" />
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Save" x:Name="btnSave" BackgroundColor="DeepSkyBlue" CornerRadius="20" TextColor="White" VerticalOptions="Center" Clicked="BtnSave_Clicked"/>
+                        <Button Text="Selection" x:Name="btnSelection" BackgroundColor="DeepSkyBlue" CornerRadius="20" TextColor="White" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Clicked="BtnSelection_Clicked"/>
+                    </StackLayout>
+                    <Button Text="Log Out" x:Name="btnLogOut" BackgroundColor="DeepSkyBlue" CornerRadius="20" TextColor="White" HorizontalOptions="Center" Clicked="BtnLogOut_Clicked"/>
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
